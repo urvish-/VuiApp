@@ -54,6 +54,7 @@
     "unit": "karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit",
+	"start": "node server.js",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
     "release": "cross-env NODE_ENV=production webpack --progress --hide-modules --config  ./build/webpack.release.js && cross-env NODE_ENV=production webpack --progress --hide-modules --config  ./build/webpack.release.min.js",
     "prepublishOnly": "yarn run lint && yarn run test && yarn run build",
@@ -89,7 +90,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "eslint-plugin-vue": "^5.2.3",
     "eventsource-polyfill": "^0.9.6",
-    "express": "^4.15.2",
+    "express": "^4.17.1",
     "extract-text-webpack-plugin": "^3.0.1",
     "file-loader": "^0.10.1",
     "friendly-errors-webpack-plugin": "^1.6.1",
@@ -149,5 +150,8 @@
       "webpack",
       "webpack-merge"
     ]
+  },
+  "dependencies": {
+    "serve-static": "^1.14.1"
   }
 }
