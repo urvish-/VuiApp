@@ -14,7 +14,7 @@ jobs:
   pr_commented:
     # This job only runs for pull request comments
     name: PR comment
-    if: contains(${{ github.event.issue.pull_request }},'Hello Krimesh')
+    if: startsWith(${{ github.event.issue.pull_request }},'Hello Krimesh')
     runs-on: ubuntu-latest
     steps:
       - run: |
