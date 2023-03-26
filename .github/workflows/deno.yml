@@ -8,8 +8,7 @@
 
 name: Deno
 
-on:
-  on: issue_comment
+on: issue_comment
 
 jobs:
   pr_commented:
