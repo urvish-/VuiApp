@@ -14,11 +14,11 @@ jobs:
   pr_commented:
     # This job only runs for pull request comments
     name: PR comment
-    if: ${{ github.event.issue.pull_request }}
+    if: contains(${{ github.event.issue.pull_request }},'Hello Krimesh')
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo A comment on PR  ${{ github.event.comment.body }}
+          echo A comment on PR  ${{ github.event.comment.body }} found.
         env:
           NUMBER: ${{ github.event.issue.number }}
 
